@@ -127,21 +127,21 @@
       <div class="section-head"><p>03 / UNDERWORLD</p><h2>THÀNH PHỐ CÓ<br><em>MẶT TỐI.</em></h2></div>
       <div class="crime-grid">
         <div class="crime-main"><span>CRIMINAL LIFE</span><h3>RULE THE<br>UNDERGROUND.</h3><p>Gang, cartel, heist, black market và những cuộc chiến quyền lực. Không có con đường nào an toàn.</p><a class="primary" href="#gangs">KHÁM PHÁ CRIMINAL</a></div>
-        <div class="crime-side"><b>GANGS</b><p>Xây dựng thế lực và lãnh địa.</p></div>
-        <div class="crime-side"><b>HEISTS</b><p>Những phi vụ cần kế hoạch.</p></div>
-        <div class="crime-side"><b>BLACK MARKET</b><p>Hàng hóa không xuất hiện trên kệ.</p></div>
+        <div class="crime-side nexus-click" data-info="gangs"><b>GANGS</b><p>Xây dựng thế lực và lãnh địa.</p><span class="click-hint">XEM THÔNG TIN →</span></div>
+        <div class="crime-side nexus-click" data-info="heists"><b>HEISTS</b><p>Những phi vụ cần kế hoạch.</p><span class="click-hint">XEM THÔNG TIN →</span></div>
+        <div class="crime-side nexus-click" data-info="blackmarket"><b>BLACK MARKET</b><p>Hàng hóa không xuất hiện trên kệ.</p><span class="click-hint">XEM THÔNG TIN →</span></div>
       </div>
     </section>
 
     <section class="section dark-section" id="jobs">
       <div class="section-head"><p>04 / CAREER</p><h2>KIẾM TIỀN.<br><em>XÂY DỰNG SỰ NGHIỆP.</em></h2></div>
       <div class="job-grid">
-        <div>🚛 <b>TRUCKING</b><small>Vận tải hàng hóa</small></div>
-        <div>🔧 <b>MECHANIC</b><small>Sửa chữa & độ xe</small></div>
-        <div>🎣 <b>FISHING</b><small>Đánh bắt & kinh doanh</small></div>
-        <div>🏪 <b>BUSINESS</b><small>Sở hữu doanh nghiệp</small></div>
-        <div>🚕 <b>TAXI</b><small>Dịch vụ thành phố</small></div>
-        <div>🏗️ <b>CONSTRUCTION</b><small>Công việc dân sự</small></div>
+        <div class="nexus-click" data-info="trucking">🚛 <b>TRUCKING</b><small>Vận tải hàng hóa</small><span class="click-hint">XEM THÔNG TIN →</span></div>
+        <div class="nexus-click" data-info="mechanic">🔧 <b>MECHANIC</b><small>Sửa chữa & độ xe</small><span class="click-hint">XEM THÔNG TIN →</span></div>
+        <div class="nexus-click" data-info="fishing">🎣 <b>FISHING</b><small>Đánh bắt & kinh doanh</small><span class="click-hint">XEM THÔNG TIN →</span></div>
+        <div class="nexus-click" data-info="business">🏪 <b>BUSINESS</b><small>Sở hữu doanh nghiệp</small><span class="click-hint">XEM THÔNG TIN →</span></div>
+        <div class="nexus-click" data-info="taxi">🚕 <b>TAXI</b><small>Dịch vụ thành phố</small><span class="click-hint">XEM THÔNG TIN →</span></div>
+        <div class="nexus-click" data-info="construction">🏗️ <b>CONSTRUCTION</b><small>Công việc dân sự</small><span class="click-hint">XEM THÔNG TIN →</span></div>
       </div>
     </section>
 
@@ -211,6 +211,18 @@
     <div class="footer-links"><a href="#rules">Rules</a><a href="#support">Support</a><a href="#store">Store</a><a href="#news">News</a></div>
     <p>© 2026 NEXUS ROLEPLAY. All rights reserved.</p>
   </footer>
+
+  <div class="nexus-modal" id="nexusModal" aria-hidden="true">
+    <div class="nexus-modal-backdrop" data-close-modal></div>
+    <div class="nexus-modal-box" role="dialog" aria-modal="true">
+      <button class="nexus-modal-close" type="button" data-close-modal>×</button>
+      <span class="nexus-modal-kicker">NEXUS ROLEPLAY</span>
+      <h2 id="nexusModalTitle">INFORMATION</h2>
+      <p id="nexusModalText"></p>
+      <div class="nexus-modal-line"></div>
+      <div class="nexus-modal-tags" id="nexusModalTags"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
