@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <style>
+#bg-video { 
+  position: fixed; 
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -2; 
+  object-fit: cover; 
+  filter: brightness(0.35) contrast(1.1); 
+}
+.overlay { 
+  background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(150,0,0,0.3) 100%); 
+  position: fixed; 
+  top:0; 
+  left:0; 
+  width:100%; 
+  height:100%; 
+  z-index: -1; 
+}
+  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#090909" />
@@ -225,5 +246,9 @@
   </div>
 
   <script src="script.js"></script>
-</body>
+</body><
+         video autoplay muted loop playsinline id="bg-video">
+  <source src="bg.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
 </html>
