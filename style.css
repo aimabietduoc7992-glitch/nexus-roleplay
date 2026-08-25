@@ -164,116 +164,228 @@ section[id*="organizations"] article:hover{
 .nexus-modal-tags span{border:1px solid #39332a;border-radius:999px;padding:8px 12px;color:#d6a932;font-size:9px;font-weight:800;letter-spacing:1px}
 @keyframes nexusModalIn{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
 @media(max-width:650px){.nexus-modal-box{padding:32px 24px}.nexus-modal-box h2{font-size:58px}.nexus-modal-box p{font-size:14px}}
-/* NEXUS WHITELIST FORM */
+/* =========================================
+   NEXUS WL — PREMIUM MOBILE FORM
+   ========================================= */
+
 #whitelistForm {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-top: 28px;
+  gap: 22px;
 }
+
+/* INPUT + TEXTAREA */
 
 #whitelistForm input[type="text"],
 #whitelistForm input[type="number"],
 #whitelistForm textarea {
   width: 100%;
   box-sizing: border-box;
-  padding: 14px 16px;
-  border: 1px solid rgba(220, 170, 30, 0.35);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.04);
+  display: block;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(245,180,45,.20);
+  border-radius: 10px;
   color: #fff;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 15px;
+  padding: 14px 16px;
   outline: none;
+  transition: .25s ease;
+}
+
+#whitelistForm input[type="text"],
+#whitelistForm input[type="number"] {
+  min-height: 50px;
 }
 
 #whitelistForm textarea {
-  min-height: 110px;
+  min-height: 105px;
   resize: vertical;
-  line-height: 1.5;
+  line-height: 1.6;
 }
+
+/* PLACEHOLDER */
 
 #whitelistForm input::placeholder,
 #whitelistForm textarea::placeholder {
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,.38);
 }
+
+/* FOCUS */
 
 #whitelistForm input:focus,
 #whitelistForm textarea:focus {
-  border-color: #e5ad20;
-  box-shadow: 0 0 0 2px rgba(229,173,32,0.08);
+  border-color: #f5ad2d;
+  background: rgba(245,173,45,.055);
+  box-shadow: 0 0 0 3px rgba(245,173,45,.08);
 }
+
+/* THÔNG TIN NHÂN VẬT */
+
+#whitelistForm > input:nth-of-type(1),
+#whitelistForm > input:nth-of-type(2),
+#whitelistForm > input:nth-of-type(3),
+#whitelistForm > input:nth-of-type(4),
+#whitelistForm > textarea:nth-of-type(1),
+#whitelistForm > textarea:nth-of-type(2) {
+  margin-bottom: 0;
+}
+
+/* CÂU HỎI */
 
 #whitelistForm h3 {
-  margin: 18px 0 2px;
-  font-size: 20px;
-  letter-spacing: 1px;
+  margin: 12px 0 -5px;
+  padding-left: 14px;
+  border-left: 3px solid #f5ad2d;
+  color: #f5ad2d;
+  font-size: 18px;
+  letter-spacing: 1.5px;
 }
 
-#whitelistForm label {
+/* QUESTION CARD */
+
+#whitelistForm label:not(.checkbox-row) {
   display: block;
-  margin-top: 8px;
-  color: rgba(255,255,255,0.9);
+  padding: 18px;
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 12px;
+  color: rgba(255,255,255,.88);
   font-size: 14px;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
-#whitelistForm label:not(.checkbox-row)::before {
-  content: "";
+#whitelistForm label:not(.checkbox-row) textarea {
+  margin-top: 13px;
 }
+
+/* CHECKBOX */
 
 #whitelistForm .checkbox-row {
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 16px;
+  background: rgba(245,173,45,.045);
+  border: 1px solid rgba(245,173,45,.18);
+  border-radius: 10px;
+  color: rgba(255,255,255,.75);
   cursor: pointer;
 }
 
 #whitelistForm .checkbox-row input {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 auto;
-  margin-top: 2px;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin: 0;
+  border: 1px solid rgba(245,173,45,.55);
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
 }
 
-#whitelistForm button {
+#whitelistForm .checkbox-row input:checked {
+  background: #f5ad2d;
+  border-color: #f5ad2d;
+  box-shadow: inset 0 0 0 4px #151515;
+}
+
+/* BUTTON */
+
+#whitelistForm button[type="submit"] {
+  width: 100%;
+  min-height: 55px;
+  margin-top: 5px;
   border: 0;
+  border-radius: 10px;
+  background: #f5ad2d;
+  color: #111;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
   cursor: pointer;
-  align-self: flex-start;
+  transition: .25s ease;
+}
+
+#whitelistForm button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(245,173,45,.18);
 }
 
 #wlMessage {
-  margin: 5px 0 0;
+  text-align: center;
+  color: #f5ad2d;
   font-weight: 600;
+  line-height: 1.5;
 }
 
-@media (max-width: 600px) {
+/* =========================================
+   DESKTOP — 2 CỘT THÔNG TIN CƠ BẢN
+   ========================================= */
+
+@media (min-width: 700px) {
+
   #whitelistForm {
-    gap: 12px;
+    gap: 20px;
+  }
+
+  #whitelistForm > input:nth-of-type(1),
+  #whitelistForm > input:nth-of-type(2),
+  #whitelistForm > input:nth-of-type(3),
+  #whitelistForm > input:nth-of-type(4) {
+    width: calc(50% - 10px);
+  }
+
+  #whitelistForm > input:nth-of-type(1),
+  #whitelistForm > input:nth-of-type(3) {
+    margin-right: auto;
+  }
+
+}
+
+/* =========================================
+   MOBILE — XẾP ĐẸP 1 CỘT
+   ========================================= */
+
+@media (max-width: 699px) {
+
+  #whitelistForm {
+    gap: 15px;
+    margin-top: 22px;
+  }
+
+  #whitelistForm h3 {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  #whitelistForm label:not(.checkbox-row) {
+    padding: 15px;
+    font-size: 13px;
   }
 
   #whitelistForm input[type="text"],
   #whitelistForm input[type="number"],
   #whitelistForm textarea {
-    font-size: 15px;
+    font-size: 14px;
     padding: 13px 14px;
   }
 
   #whitelistForm textarea {
-    min-height: 120px;
+    min-height: 95px;
   }
 
-  #whitelistForm label {
-    font-size: 14px;
-    line-height: 1.6;
+  #whitelistForm .checkbox-row {
+    font-size: 12px;
+    line-height: 1.45;
   }
 
-  #whitelistForm h3 {
-    font-size: 18px;
+  #whitelistForm button[type="submit"] {
+    min-height: 52px;
   }
-
-  #whitelistForm button {
-    width: 100%;
-    text-align: center;
-  }
-    }
+}
