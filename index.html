@@ -88,7 +88,7 @@
     <a href="#home">TRANG CHỦ</a>
     <details><summary>THAM GIA</summary>
       <a href="#join">Bắt đầu</a><a href="#whitelist">Whitelist</a><a href="#guide">Hướng dẫn</a>
-    </details>
+    </details>cho 
     <details><summary>THÀNH PHỐ</summary>
       <a href="#city">Tổng quan</a><a href="#map">Bản đồ</a><a href="#economy">Kinh tế</a><a href="#jobs">Việc làm</a><a href="#business">Doanh nghiệp</a>
     </details>
@@ -189,8 +189,66 @@
 
     <section class="section dark-section" id="whitelist">
       <div class="section-head"><p>07 / WHITELIST</p><h2>CHỨNG MINH<br><em>BẠN THUỘC VỀ NEXUS.</em></h2></div>
-      <div class="wl-box"><b>WHITELIST APPLICATION</b><p>Trả lời câu hỏi Serious RP và cung cấp thông tin cần thiết để đội ngũ xét duyệt.</p><a class="primary" href="https://discord.gg/nexusroleplayyy" target="_blank">ĐĂNG KÝ WHITELIST ↗</a></div>
-    </section>
+      <div class="wl-box">
+  <b>WHITELIST APPLICATION</b>
+  <p>Điền thông tin nhân vật và trả lời các câu hỏi Serious RP để đội ngũ NEXUS xét duyệt.</p>
+
+  <form id="whitelistForm">
+
+    <input type="text" name="characterName" placeholder="Tên nhân vật" required>
+
+    <input type="number" name="characterAge" placeholder="Tuổi nhân vật" min="18" max="80" required>
+
+    <input type="text" name="discordId" placeholder="Discord ID" required>
+
+    <input type="text" name="steamHex" placeholder="Steam Hex" required>
+
+    <textarea name="biography" placeholder="Tiểu sử nhân vật: Quê quán, gia đình, quá trình trưởng thành..." required></textarea>
+
+    <textarea name="direction" placeholder="Định hướng nhân vật: Bạn muốn trở thành ai và xây dựng câu chuyện như thế nào tại NEXUS?" required></textarea>
+
+    <h3>CÂU HỎI ROLEPLAY</h3>
+
+    <label>01. Bạn đang lái xe và vô tình va chạm với một người chơi khác. Bạn xử lý thế nào?</label>
+    <textarea name="answer1" required></textarea>
+
+    <label>02. Bạn bị một người dùng súng uy hiếp. Nhân vật của bạn nên phản ứng như thế nào?</label>
+    <textarea name="answer2" required></textarea>
+
+    <label>03. Bạn đang bị cảnh sát truy đuổi. Bạn sẽ làm gì để tình huống vẫn hợp lý trong RP?</label>
+    <textarea name="answer3" required></textarea>
+
+    <label>04. Bạn nghe bạn bè Discord nói vị trí của một người chơi đang trốn. Nhân vật của bạn có được biết thông tin đó không? Vì sao?</label>
+    <textarea name="answer4" required></textarea>
+
+    <label>05. Một người chơi cố tình ép nhân vật của bạn thực hiện một hành động phi thực tế. Bạn xử lý thế nào?</label>
+    <textarea name="answer5" required></textarea>
+
+    <label>06. Nhân vật của bạn bị thương nặng sau một vụ tai nạn. Bạn sẽ RP tình huống này như thế nào?</label>
+    <textarea name="answer6" required></textarea>
+
+    <label>07. Bạn đang bị bắt cóc nhưng có cơ hội chống trả. Bạn cần cân nhắc điều gì trước khi hành động?</label>
+    <textarea name="answer7" required></textarea>
+
+    <label>08. Bạn chứng kiến một vụ cướp nhưng nhân vật của bạn không có lý do để can thiệp. Bạn sẽ làm gì?</label>
+    <textarea name="answer8" required></textarea>
+
+    <label>09. Theo bạn, Serious Roleplay là gì?</label>
+    <textarea name="answer9" required></textarea>
+
+    <label class="checkbox-row">
+      <input type="checkbox" name="agree" required>
+      Tôi đã đọc luật NEXUS Roleplay và cam kết tuân thủ luật server.
+    </label>
+
+    <button type="submit" class="primary">
+      GỬI ĐƠN WHITELIST ↗
+    </button>
+
+    <p id="wlMessage"></p>
+
+  </form>
+      </div>
 
     <section class="section" id="map">
       <div class="section-head"><p>08 / MAP</p><h2>EXPLORE<br><em>THE CITY.</em></h2></div>
