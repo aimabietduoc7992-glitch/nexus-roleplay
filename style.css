@@ -164,3 +164,116 @@ section[id*="organizations"] article:hover{
 .nexus-modal-tags span{border:1px solid #39332a;border-radius:999px;padding:8px 12px;color:#d6a932;font-size:9px;font-weight:800;letter-spacing:1px}
 @keyframes nexusModalIn{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
 @media(max-width:650px){.nexus-modal-box{padding:32px 24px}.nexus-modal-box h2{font-size:58px}.nexus-modal-box p{font-size:14px}}
+/* NEXUS WHITELIST FORM */
+#whitelistForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+#whitelistForm input[type="text"],
+#whitelistForm input[type="number"],
+#whitelistForm textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid rgba(220, 170, 30, 0.35);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+#whitelistForm textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+#whitelistForm input::placeholder,
+#whitelistForm textarea::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+#whitelistForm input:focus,
+#whitelistForm textarea:focus {
+  border-color: #e5ad20;
+  box-shadow: 0 0 0 2px rgba(229,173,32,0.08);
+}
+
+#whitelistForm h3 {
+  margin: 18px 0 2px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+#whitelistForm label {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255,255,255,0.9);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+#whitelistForm label:not(.checkbox-row)::before {
+  content: "";
+}
+
+#whitelistForm .checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+#whitelistForm .checkbox-row input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+#whitelistForm button {
+  border: 0;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+#wlMessage {
+  margin: 5px 0 0;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  #whitelistForm {
+    gap: 12px;
+  }
+
+  #whitelistForm input[type="text"],
+  #whitelistForm input[type="number"],
+  #whitelistForm textarea {
+    font-size: 15px;
+    padding: 13px 14px;
+  }
+
+  #whitelistForm textarea {
+    min-height: 120px;
+  }
+
+  #whitelistForm label {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  #whitelistForm h3 {
+    font-size: 18px;
+  }
+
+  #whitelistForm button {
+    width: 100%;
+    text-align: center;
+  }
+    }
