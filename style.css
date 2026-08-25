@@ -387,5 +387,207 @@ section[id*="organizations"] article:hover{
 
   #whitelistForm button[type="submit"] {
     min-height: 52px;
-  }
+  }/* =========================================================
+   NEXUS WL — PREMIUM 3D APPLICATION
+   ========================================================= */
+
+#whitelist {
+  position: relative;
+  perspective: 1400px;
+  overflow: hidden;
+}
+
+/* ánh sáng nền */
+#whitelist::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(245, 173, 45, 0.16) 0%,
+    rgba(245, 173, 45, 0.05) 35%,
+    transparent 70%
+  );
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+/* khối WL */
+#whitelist .wl-box {
+  position: relative;
+  max-width: 1050px;
+  margin: 60px auto 0;
+  padding: 55px;
+  border: 1px solid rgba(245, 173, 45, 0.35);
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.075),
+      rgba(255,255,255,0.018)
+    );
+
+  box-shadow:
+    0 35px 100px rgba(0,0,0,.65),
+    inset 0 1px 0 rgba(255,255,255,.12),
+    inset 0 -1px 0 rgba(245,173,45,.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transform-style: preserve-3d;
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease;
+}
+
+/* viền phát sáng */
+#whitelist .wl-box::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 28px;
+  padding: 1px;
+
+  background: linear-gradient(
+    120deg,
+    transparent 10%,
+    rgba(245,173,45,.8),
+    transparent 45%,
+    rgba(255,255,255,.12),
+    transparent 80%
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: .65;
+  pointer-events: none;
+}
+
+/* logo / tiêu đề */
+#whitelist .wl-box > b {
+  display: block;
+  position: relative;
+  transform: translateZ(45px);
+
+  color: #f5ad2d;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 3px 0 rgba(245,173,45,.18),
+    0 10px 30px rgba(245,173,45,.2);
+}
+
+#whitelist .wl-box > p {
+  position: relative;
+  margin: 8px 0 32px;
+
+  color: rgba(255,255,255,.62);
+  line-height: 1.7;
+
+  transform: translateZ(25px);
+}
+
+/* form */
+#whitelistForm {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  transform-style: preserve-3d;
+}
+
+/* input */
+#whitelistForm input,
+#whitelistForm textarea {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  color: #fff;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.075),
+      rgba(0,0,0,.28)
+    );
+
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+
+  padding: 17px 18px;
+
+  outline: none;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    0 10px 30px rgba(0,0,0,.18);
+
+  transition:
+    .3s ease;
+
+  transform: translateZ(18px);
+}
+
+#whitelistForm input:hover,
+#whitelistForm textarea:hover {
+  border-color: rgba(245,173,45,.35);
+  transform: translateZ(24px);
+}
+
+#whitelistForm input:focus,
+#whitelistForm textarea:focus {
+  border-color: #f5ad2d;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(245,173,45,.10),
+      rgba(0,0,0,.3)
+    );
+
+  box-shadow:
+    0 0 0 3px rgba(245,173,45,.08),
+    0 15px 40px rgba(0,0,0,.3),
+    0 0 30px rgba(245,173,45,.10);
+
+  transform:
+    translateZ(32px)
+    translateY(-2px);
+}
+
+/* placeholder */
+#whitelistForm input::placeholder,
+#whitelistForm textarea::placeholder {
+  color: rgba(255,255,255,.38);
+}
+
+/* textarea */
+#whitelistForm textarea {
+  min-height: 125px;
+  resize: vertical;
+}
+
+/* tiêu đề câu hỏi */
+#whitelistForm h3 {
+  margin: 30px 0 5px;
+
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+
+  transform: translateZ(35px
 }
