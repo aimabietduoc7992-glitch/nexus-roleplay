@@ -43,4 +43,42 @@ function closeNexusModal(){
   nexusModal.classList.remove('open');
   nexusModal.setAttribute('aria-hidden','true');
   document.body.style.overflow='';
+}/* ===== NEXUS WL 3D INTERACTION ===== */
+
+const wlCard = document.querySelector('.wl-3d-card');
+
+if (wlCard) {
+  wlCard.addEventListener('mousemove', (e) => {
+    const rect = wlCard.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateY = ((x / rect.width) - 0.5) * 10;
+    const rotateX = ((y / rect.height) - 0.5) * -10;
+
+    wlCard.style.transform =
+      `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+  });
+
+  wlCard.addEventListener('mouseleave', () => {
+    wlCard.style.transform =
+      'rotateX(0deg) rotateY(0deg) translateY(0)';
+  });
+}
+
+/* WL FORM */
+
+const whitelistForm = document.getElementById('whitelistForm');
+const wlMessage = document.getElementById('wlMessage');
+
+if (whitelistForm) {
+  whitelistForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    wlMessage.textContent =
+      '✓ Đơn Whitelist đã được ghi nhận. Đội ngũ NEXUS sẽ kiểm tra đơn của bạn.';
+
+    whitelistForm.reset();
+  });
 }
